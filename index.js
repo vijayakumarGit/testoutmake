@@ -7,5 +7,5 @@ app.get('/list',(req,res)=>{
 });
 
 app.listen(3000,()=>{
-	console.log('Port Listing 3000 ..');
+	console.log('Port Listing 3000 .');
 });
