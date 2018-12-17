@@ -9,6 +9,7 @@ app.use(express.json());
 app.get('/', (req, res) => {
 	res.status(200).send('Main Server working at 3000');
 });
+
 app.post('/addtodb',(req,res)=>{
 	// console.log(req.body);
 	const db=main_db.db('kiri').collection('user_data');
