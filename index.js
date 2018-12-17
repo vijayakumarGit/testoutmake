@@ -22,6 +22,7 @@ app.get('/getfromdb/:id',(req,res)=>{
 	// "_id": {
 	// "$oid": "5c0f8b5675334b0ce66413aa"
 	// }
+	// const 
 	const db=main_db.db('kiri').collection('user_data');
 	db.findOne({"_id": ObjectId(req.params.id)},(err,result)=>{
 		if(err) return res.status(400).send(err);
