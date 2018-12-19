@@ -35,7 +35,7 @@ MongoClient.connect(db_url,{ useNewUrlParser: true },(err,database)=>{
 		return console.log('DB error:' + err);
 	}
 	main_db=database;
-	app.listen(3000, () => {
+	app.listen(80, () => {
 	console.log('Port Listing 3000 .');
 	});
 	
