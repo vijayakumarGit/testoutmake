@@ -30,13 +30,14 @@ app.get('/getfromdb/:id',(req,res)=>{
 		return res.status(200).send(result); 
 	});
 });
+const port= process.env.PORT || 3000;
 MongoClient.connect(db_url,{ useNewUrlParser: true },(err,database)=>{
 	if(err){
 		return console.log('DB error:' + err);
 	}
 	main_db=database;
-	app.listen(80, () => {
-	console.log('Port Listing 3000 .');
+	app.listen(port, () => {
+	console.log(`Port Listing ${port} .`);
 	});
 	
 });
