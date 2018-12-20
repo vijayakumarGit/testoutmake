@@ -4,6 +4,8 @@ const app = express();
 const client = require('./config/db');
 const db_client = new client();
 const router= require('./routes/routers');
+const cors = require('cors');
+app.use(cors());
 app.use(express.json());
 app.use(router);
 
