@@ -3,6 +3,6 @@ const {schema}=require('./schema');
 
 module.exports=class validation{
 	constructor(reqObj){
-		return Joi.validate(reqObj,schema);
+		return Joi.validate(reqObj,schema,{stripUnknown: true});
 	}
 };
