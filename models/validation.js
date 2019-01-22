@@ -1,8 +1,13 @@
 const Joi=require('joi');
-const {schema}=require('./schema');
+const {loginschema,adduserschema}=require('./schema');
 
 module.exports=class validation{
-	constructor(reqObj){
-		return Joi.validate(reqObj,schema,{stripUnknown: true});
+	constructor(){		
+	}
+	login(reqObj){
+		return Joi.validate(reqObj,loginschema,{stripUnknown: true});
+	}
+	adduser(reqObj){
+		return Joi.validate(reqObj,adduserschema,{stripUnknown: true});
 	}
 };
